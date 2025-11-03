@@ -1,7 +1,7 @@
 1. add this to your pyproject.toml file,  after the `dependencies` variable
 
-   [tool.poetry] 
-   package-mode = false
+[tool.poetry] 
+package-mode = false
 
 
 
