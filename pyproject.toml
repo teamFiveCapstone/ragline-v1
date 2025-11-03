@@ -3,7 +3,7 @@ name = "parse-test"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "t-fb",email = " t.fabrigar@gmail.com"}
+    {name = "t-fb",email = " t.fabrigar@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13,<4.0"
@@ -12,6 +12,8 @@ dependencies = [
     "llama-index (>=0.14.7,<0.15.0)"
 ]
 
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
