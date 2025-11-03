@@ -1,21 +1,10 @@
-# parsing done with docling
-# chunking done with llamaindex import json
 
 
-from llama_index.core.node_parser import SentenceSplitter
-from llama_index.core import SimpleDirectoryReader
-from llama_index.embeddings.openai import OpenAIEmbedding
+# Query the index and print the response
+query_engine = index.as_query_engine()
+response = query_engine.query("What are lions?")
+print(response)
 
-
-# Load the lion.md file
-lionMD= SimpleDirectoryReader(input_files=["lion.md"]).load_data()
-
-# measure by tokens
-splitter = SentenceSplitter(
-    chunk_size=400,
-    chunk_overlap=20,
-)
-nodes = splitter.get_nodes_from_documents(lionMD)
-
-# embedding 
-embed_model = OpenAIEmbedding(model="text-embedding-3-small")
+# Lions are large carnivorous mammals known for their distinctive manes, with males typically having fuller and darker manes compared to females.
+#  They are social animals that live in groups called prides and are known for their hunting prowess.
+#  Lions are facing threats such as habitat loss, conflicts with humans, and over-harvesting, leading to conservation concerns about their future survival.
