@@ -1,14 +1,13 @@
-1. add this to your pyproject.toml file,  after the `dependencies` variable
+1.) Run
 
 ```
-[tool.poetry] 
-package-mode = false
+npm install @langchain/core@latest @langchain/community @langchain/textsplitters pdf-parse
 ```
 
+2.) Add "type": "module" to package.json
 
-poetry install
+3.) Run
 
-eval $(poetry env activate)
-
-poetry run python your_script.py
-
+```
+node main.js
+```
