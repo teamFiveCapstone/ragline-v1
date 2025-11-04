@@ -1,14 +1,19 @@
-1. add this to your pyproject.toml file,  after the `dependencies` variable
-
 ```
-[tool.poetry] 
-package-mode = false
+pytho3n -m venv venv
 ```
 
+```
+source venv/bin/activate
+```
 
-poetry install
+```
+pip install docling
+```
 
-eval $(poetry env activate)
+```
+pip install langchain
+```
 
-poetry run python your_script.py
-
+```
+python main.py
+```
